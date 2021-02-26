@@ -5,23 +5,23 @@ import {
   Route,
 } from 'react-router-dom';
 //COMPONENTS
-import Form from "../components/root";
+import Dashboard from "../pages/form";
 
 
 export default function Routes() {
   return ( 
     <Router>
-        <Switch>
-            <Route exact path="/" component={Form} /> 
-            <Route exact path='/clientes' component={Form} /> 
-            <Route exact path='/suscripciones' component={Form} /> 
-            <Route exact path='/cobra' component={Form} /> 
-            <Route exact path='/recaudo' component={Form} /> 
-            <Route exact path='/reportes' component={Form} /> 
-            <Route exact path='/saldoRetiro' component={Form} /> 
-            <Route exact path='/integraciones' component={Form} /> 
-            <Route exact path='/admin' component={Form} /> 
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={Dashboard} /> 
+        <Route exact path='/clientes' component={Dashboard} /> 
+        <Route exact path='/suscripciones' component={Dashboard} /> 
+        <Route exact path='/cobra' component={Dashboard} /> 
+        <Route exact path='/recaudo' component={Dashboard} /> 
+        <Route exact path='/reportes' component={Dashboard} /> 
+        <Route exact path='/saldoRetiro' component={Dashboard} /> 
+        <Route exact path='/integraciones' component={Dashboard} /> 
+        <Route exact path='/admin' component={Dashboard} /> 
+      </Switch>
     </Router> 
   )
 } 
