@@ -8,25 +8,20 @@ import EpaycoLogo from '../../assets/img/epayco.png'
 //STYLES
 import useStyles from './styles';
 
- 
-
 export default function MuiFooter() {
- 
- 
+
   const classes = useStyles(); 
  
-   
-
   return (
     <Grid className={classes.root}>
-        <Container className={classes.container}>
+        <Container >
             <Grid container
                     direction="row"
                     justify="space-between"
                     alignItems="center" >
 
                 <Grid item xs={5}  >
-                    <Typography variant="body2" gutterBottom className={classes.title}>
+                    <Typography variant="body2" noWrap className={classes.title}>
                     ePayco © 2011 - 2019 todos los derechos reservados. 
                     </Typography>
                 </Grid>
@@ -39,9 +34,7 @@ export default function MuiFooter() {
                   </Grid>
                   <Grid item className={classes.containerLogo}>
                     <img src={EpaycoLogo} alt={'epayco'} className={classes.logo}/>
-                  </Grid>
-                  {/* <img src={DaviviendaLogo} alt={'davivienda'} />
-                  <img src={EpaycoLogo} alt={'epayco'} /> */}
+                  </Grid> 
                 </Grid> 
             </Grid>
 

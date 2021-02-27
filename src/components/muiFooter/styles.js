@@ -8,27 +8,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-  },
-  container: {
-    //marginTop: theme.spacing(1),
-    //marginBottom: theme.spacing(1),
-  },
+  }, 
   title: {
     color: "#000",
     [theme.breakpoints.down("xs")]: {
       fontSize: 10,
     },
   },
-  containerLogo: {
-    //backgroundColor: 'red',
+  containerLogo: { 
     display: "flex",
     marginLeft: theme.spacing(1),
     justifyContent: "center",
     alignItems: "center",
   },
   logo: {
-    [theme.breakpoints.down("xs")]: {
-      //with: theme.spacing(2),
+    [theme.breakpoints.down("xs")]: { 
       height: theme.spacing(1.5),
     },
   },

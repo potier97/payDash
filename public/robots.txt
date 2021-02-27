@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://pay.cidu.com.co
+
+# Sitemaps
+Sitemap: https://pay.cidu.com.co/sitemap.xml

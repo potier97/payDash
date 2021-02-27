@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import clsx from 'clsx'; 
 import MuiAppBar from '../../components/appbar';
 import MuiFooter from '../../components/muiFooter'
 import MuiDrawer from '../../components/drawer';
@@ -19,7 +18,7 @@ export default function Dahboard(props){
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <div className={clsx({ [classes.root]: true })}>
+    <div className={classes.root}>
       <MuiAppBar onDrawerToggle={handleMenu} statusbar={isMobile} stateScreen={isDesktop} />
       <MuiDrawer 
         open={isMobile}
@@ -28,10 +27,7 @@ export default function Dahboard(props){
         onClose={handleMenu}
         stateScreen={isMobile} 
       />
-      <main className={clsx(classes.main, classes.mainShift)} 
-      //className={clsx(classes.main, isMobile && classes.mainShift)} 
-      >
-
+      <main className={classes.main} > 
         {children}
         <MuiFooter />
       </main>

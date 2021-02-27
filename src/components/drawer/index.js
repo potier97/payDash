@@ -1,5 +1,4 @@
 import React from 'react'; 
-//import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -91,22 +90,18 @@ export default function MuiDrawer(props) {
   return (
     <Drawer
     className={classes.drawer} 
-    PaperProps={{ className: classes.appBarShift}}
-    //PaperProps={{ className: clsx(!statusbar && classes.appBar, classes.appBarShift) }}
+    PaperProps={{ className: classes.appBarShift}} 
     anchor="left" 
-    {...rest}
-    // classes={{
-    //     paper: classes.drawerPaper,
-    // }}
+    {...rest} 
     >
-    <div className={classes.drawerHeader}>
-        {/* <IconButton onClick={handleDrawerClose}>
-        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-        </IconButton> */}
+    <div className={classes.drawerHeader}> 
         <img src={logo} alt="logo" className={classes.logo}/>
     </div>
     <Divider />
     <List>
+        <ListItem className={classes.containerNameUser}>
+            <ListItemText primary={'ALEXANDER RODRIGUEZ RODRIGUEZ'} primaryTypographyProps={{ 'noWrap': true }} className={classes.tittleName} />
+        </ListItem> 
         {viewsPages.map(view => (
         <ListItem button key={view.name} onClick={() => handlePage(view.route)} className={classes.listItem}>
             <ListItemIcon>{<Avatar alt="Remy Sharp" variant="square" src={view.icon} className={classes.logoScreeen}/>}</ListItemIcon>
